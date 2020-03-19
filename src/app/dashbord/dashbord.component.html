@@ -1,0 +1,67 @@
+<!-- <div class="container">          
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let book of responseData">
+          <td (click)="getnews(book.source.id)">{{book.source.id}}</td>
+          <td>{{book.source.name}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
+
+
+<!-- <div class="card">
+      <div class="card-header">Header</div>
+      <div class="card-body">Content</div> 
+      <div class="card-footer">Footer</div>
+    </div><br> -->
+<div class="container">
+  <div class="card" *ngFor="let book of responseData">
+    <div class="card-header" style="background-color: white;">
+      {{book.title}}
+    </div>
+    <div class="card-body row">
+      <div class="col-6">
+        <div>
+          {{book.author}}
+        </div>
+        <div>
+          <b>{{book.description}}</b>
+        </div>
+      </div>
+      <div class="col-6">
+        <img [src]="book.urlToImage" style="width: 43%;height: auto;float: right;border-radius: 10%;">
+      </div>
+
+      <!-- {{book.author}}
+          {{book.description}}
+          {{book.url}} -->
+
+      <!-- {{book.publishedAt}}
+          {{book.content}} -->
+    </div>
+    <div class="card-footer" style="border-bottom: 5%;background-color: white;">
+      <a (click)="showFullNews(book.source.id,book.description)">View Full Coverage</a>
+    </div>
+  </div>
+</div>
+<!-- <div class="row">
+        <div class="col-xs-12 col-12">
+            <pagination [boundaryLinks]="true" [totalItems]="responseData.length" [itemsPerPage]="5" [maxSize]="5"
+                [rotate]="true" (pageChanged)="pageChanged($event)" previousText="&lsaquo;" nextText="&rsaquo;"
+                firstText="&laquo;" lastText="&raquo;">
+            </pagination>
+        </div>
+    </div> -->
+<!-- <div class="card">
+        <div class="card-header">Header</div>
+        <div class="card-body">Content</div> 
+        <div class="card-footer">Footer</div>
+      </div> -->
+<!-- </div> -->

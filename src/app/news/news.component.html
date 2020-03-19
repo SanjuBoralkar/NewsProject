@@ -1,0 +1,23 @@
+<div class="container" *ngFor="let selectedNews of selectedResponseData">
+    <div style="background-color: white;">
+        {{"News Title : "}} {{selectedNews.title}}
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div>
+                {{"Author : "}} {{selectedNews.author}}
+            </div>
+            <div>
+                <b>{{"Description : "}}{{selectedNews.description}}</b>
+            </div>
+        </div>
+        <div class="col-12">
+            <img [src]="selectedNews.urlToImage" style="width: 100%;height: auto;border-style: solid;">
+        </div>
+        <div class="container "><a class = "nav-link" href="https://www.ft.com/content/397a7766-6874-11ea-800d-da70cff6e4d3">{{"url : "}}{{selectedNews.url}}</a></div>
+        <div class="container ">{{"Publish Date : "}}{{selectedNews.publishedAt | date}}</div>
+        <div class="container ">{{"Source Id : "}}{{selectedNews.source.id}}</div>
+        <div class="container ">{{"Source Name : "}}{{selectedNews.source.name}}</div>
+        
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<header class="navbar navbar-static-top">
+    <div class="container-fluid">
+ 
+    </div>
+</header>
+<main>
+    <div class="container">
+        <div class="vertical-middle text-center">
+
+            <div style="width: 50%; margin-left: 22%;">
+                <div class="card card-signin my-5">
+                    <div class="card-body">
+                        <form class="form-signin">
+                            <div class="form-label-group">
+                                <input type="text" id="inputEmail" class="form-control" name="userName" [(ngModel)] = "userName" placeholder="User Name" required autofocus>
+                                <label for="inputEmail">User Name</label>
+                            </div>
+
+                            <div class="form-label-group">
+                                <input type="password" id="inputPassword" class="form-control" name = "password" [(ngModel)] = "password" placeholder="Password" required>
+                                <label for="inputPassword">Password</label>
+                            </div>
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" (click)="signIn()">Sign in</button>
+                            <hr class="my-4">
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
